@@ -1,0 +1,70 @@
+In programming, particularly in web development, the terms "Document" and "Windows" often appear when working with browsers. 
+Although they may seem similar, they refer to different concepts. 
+Here, we will explore the differences between Document and Windows Object Theory with examples.
+
+Document Object:
+====================
+
+Definition: The Document object represents the entire HTML document displayed in the browser window.
+
+Purpose: It provides an interface for accessing and manipulating the content of the document, including elements such as text, images, forms, and more.
+
+
+1.body: Provides the contents of the body element.
+2.cookie: Returns the cookie of the current document.
+3.URL: Retrieves the complete URL of the document.
+4.forms: Returns all elements of a form.
+5.querySelector(): Selects the first element matching a CSS selector.
+6.write(): Writes content or JavaScript code in the document.
+7.activeElement: Returns the currently active element.
+
+examples:
+---------------
+// Select the element with the ID of 'myHeading'
+const heading = document.getElementById('myHeading');
+
+// Change the text content of the heading
+heading.textContent = 'New Heading Text';
+
+// Add a class to the heading
+heading.classList.add('highlight');
+
+// Remove the heading from the DOM
+heading.remove();
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Window Object:
+==================
+
+Definition: The Window object represents the browser window or tab containing the Document object.
+
+Purpose: It provides an interface to interact with the browser window, including navigation, resizing, and communication between windows or frames.
+
+1.setTimeout(): Executes a function after a specified time.
+2.parseInt(): Converts a string to an integer.
+3.alert(): Displays an alert dialog box.
+4.innerWidth: Returns the width of the browser window's content area.
+5.localStorage: Provides access to the browser's local storage.
+
+examples:
+-------------
+// Access the Windows Object Model
+const windowRef = window;
+
+// Get the current webpage's URL
+const url = windowRef.location.href;
+
+// Display the URL in the status bar
+windowRef.status = url;
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Key Differences:
+
+Scope: While the Document object represents the content of a specific HTML document, 
+the Window object represents the browser window or tab containing that document.
+
+DOM vs. BOM: The Document object is part of the Document Object Model (DOM), focusing on document structure and content manipulation, 
+while the Window object belongs to the Browser Object Model (BOM), dealing with browser-specific features and interactions.
+
+Content vs. Container: The Document object encapsulates the content displayed within the browser window, 
+whereas the Window object encapsulates the browser window itself, along with its properties and methods.
